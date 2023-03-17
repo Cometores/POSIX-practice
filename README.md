@@ -1,9 +1,9 @@
 # Practice in C for POSIX standard from the Ruhr University Bochum. 
 **Goals:**
-- Improve programming skills for C
 - Work with Linux **system calls**
 - Learn how **processes** and **threads** work
 - Learn to write **multithreaded applications** for Linux
+- Improve programming skills for C
 
 **Special feature:** 
 - Programs must conform to the **ANSI C11** standard and compile with the **GNU C** compiler. To do this, call **gcc** with the following parameters: <br>
@@ -30,3 +30,10 @@ Implementation of an **Input-Output Repeater**. When entering a line into the co
 
 ### wsort
  **Word Sorting** program reads a list of words from the standard input channel (*stdin*), sorts this list alphabetically and outputs the sorted list on the standard output channel (*stdout*).
+
+
+## Processes
+Working with processes with **fork(2)** and **exec(3)**.
+
+ ### excufoe
+**Execute For Each** program, which executes a command with each of the passed parameters once.
