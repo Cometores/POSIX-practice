@@ -17,4 +17,4 @@ Programs of basic complexity, without system calls.
 Implementation of a simplified version of the <strong>Sieve of Eratosthenes</strong> (an algorithm for computing all prime numbers to a given maximum).
 
 ### Lists
-Implementation of the **lilo** and **filo** singly-linked list
+Implementation of the **lilo** and **filo** singly-linked list.
