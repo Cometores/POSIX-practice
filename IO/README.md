@@ -6,7 +6,7 @@ Implementation of an **Input-Output Repeater** that operates with Linux Standard
 - Work with **errno**.
 
 # wsort
-**Word Sorting**. Program reads a list of words from the standard input channel (*stdin*), sorts this list alphabetically and outputs the sorted list on the standard output channel (*stdout*).
+**Word Sorting** program reads a list of words from the standard input channel (*stdin*), sorts this list alphabetically and outputs the sorted list on the standard output channel (*stdout*).
 
 Both when reading in and outputting the words, each word is in its own line. A word includes **all** characters of a line. Lines are separated by a newline character (*\n*), which is not itself part of the word. Each line ends with a carriage return. Only the last line does not necessarily have to contain a *'\n'* character.
 
