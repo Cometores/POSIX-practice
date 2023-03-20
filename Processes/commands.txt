@@ -1,0 +1,3 @@
+echo try echo command
+ls 
+echo try echo again
