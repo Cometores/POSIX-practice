@@ -9,19 +9,6 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
-/*
-    HUPSI - Highly Unreliable Parallel Software Igniter
-    Befehle zeilenweise von der Standardeingabe einliest und parallel ausführt
-        - (ein Befehl pro Zeile, Zeilen mit ’\n’ getrennt)
-    maximale Anzahl n an parallel ausgeführten Befehlen
-
-    НЕ РАБОТАЕТ
-    
-    Bsp:
-        ./hupsi 2 < befehle.txt
-    
-*/
-
 #define CMD_MAX 100
 
 static void die(const char *msg) {

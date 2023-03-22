@@ -38,8 +38,8 @@ Working with processes with **fork(2)** and **exec(3)**.
 ### excufoe
 **Execute For Each** program, which executes a command with each of the passed parameters once.
 
-#### party
+### party
 **PARallel Task Player** program, which executes commands sent *through the command line* in parallel.
 
-#### hupsi
+### hupsi
 **Highly Unreliable Parallel Software Igniter**, program, which reads commands line by line *from standard input* and executes them in parallel.
