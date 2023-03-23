@@ -14,10 +14,10 @@
 ## Basics
 Programs of basic complexity, without system calls.
 
-### Sieve
+### sieve
 Implementation of a simplified version of the **Sieve of Eratosthenes** (an algorithm for computing all prime numbers to a given maximum).
 
-### Lists
+### lists
 Implementation of the **lilo** and **filo** singly-linked list.
 
 
@@ -30,6 +30,14 @@ Implementation of an **Input-Output Repeater**. When entering a line into the co
 
 ### wsort
  **Word Sorting** program reads a list of words from the standard input channel (*stdin*), sorts this list alphabetically and outputs the sorted list on the standard output channel (*stdout*).
+
+
+## File System
+Working with files and folders using the inode table.
+
+### alsym
+**All Symbolic links** program that displays the names of all symbolic links files in the current directory.
+
 
 
 ## Processes
