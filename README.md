@@ -51,3 +51,6 @@ Working with processes with **fork(2)** and **exec(3)**.
 
 ### hupsi
 **Highly Unreliable Parallel Software Igniter**, program, which reads commands line by line *from standard input* and executes them in parallel.
+
+### clash
+**C language apprentice’s shell** that runs programs passed through stdin. Supports program execution in foreground and background modes, as well as changing the working directory.
