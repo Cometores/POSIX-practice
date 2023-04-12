@@ -1,6 +1,6 @@
 # excufoe
 **Execute For Each** program, which executes a command with each of the passed parameters once.
-> **\$** ./excufoe \<program> <arguments...>
+> **\$** ./excufoe \<program> \<arguments...>
 
 **Goals:**
 - Creating child processes by fork call.
