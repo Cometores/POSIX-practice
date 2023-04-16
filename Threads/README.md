@@ -25,7 +25,7 @@ The program is called as follows:
  **Program structure**:
 - **main()** initializes the necessary data structures, **starts one crawl thread per given directory tree**, and then passively waits for statistics updates. Once all threads have terminated, main() takes over the cleanup/release of the remaining resources.
 - **void\* processTree(void\* path)** is the entry point for the crawl threads and calls the **processDir()** function to browse path.
-- **void\* processDir(char\* path)** iterates over the individual elements in the given path and calls the function processEntry() for each element found.
+- **void\* processDir(char\* path)** iterates over the individual elements in the given path and calls the function **processEntry()** for each element found.
 - **void\* processEntry(char\* path, struct dirent\* entry)** checks whether the given element entry is a regular file or a directory:
 	- For directories **processDir()** is called for recursive descent.
 	- For regular files, a separate **grep thread** is created in each case, which calls the function **processFile()** to search the file. If **max-grep-threads threads** are already running, then the creation of a new thread is delayed.
