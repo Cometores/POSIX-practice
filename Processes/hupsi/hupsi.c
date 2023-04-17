@@ -12,13 +12,13 @@
 #define CMD_MAX 100
 
 static void die(const char *msg) {
-perror(msg);
-exit(EXIT_FAILURE);
+    perror(msg);
+    exit(EXIT_FAILURE);
 }
 
 static void usage(void) {
-fprintf(stderr, "Usage: hupsi <n>\n");
-exit(EXIT_FAILURE);
+    fprintf(stderr, "Usage: hupsi <n>\n");
+    exit(EXIT_FAILURE);
 }
 
 struct process {
@@ -33,9 +33,8 @@ static void waitProcess(void);
 static struct process *head;
 
 int main(int argc, char* argv[]){
-    if(argc != 2){
+    if(argc != 2)
         usage();
-    }
 
     char *end;
     errno = 0;
@@ -59,6 +58,12 @@ int main(int argc, char* argv[]){
         if(!proc)
             die("calloc");
         
+        size_t curr_word_len = strlen(buf);
+        if(buf[curr_word_len-1] == '\n'){
+            buf[curr_word_len-1] = '\0';
+            curr_word_len--;
+        }
+
         proc->command = strdup(buf);
         if(!proc->command)
             die("strdup");
@@ -74,7 +79,7 @@ int main(int argc, char* argv[]){
         die("fgets");
 
     while(procs > 0){
-        waitProcess;
+        waitProcess();
         procs--;
     }
 
@@ -115,10 +120,14 @@ static void waitProcess() {
     //Befehlszeile raussuchen
     char *cmdline = "<unknown>";
     //Prüfung gegen PID
-    while(head != NULL){
-        if(head->pid == pid){
-            cmdline = head->command;
+
+    struct process *c = head;
+    while(c != NULL){
+        if(c->pid == pid){
+            cmdline = c->command;
+            break;
         }
+        c = c->next;
     }
 
     //Terminierungsgrund ausgeben

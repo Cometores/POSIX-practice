@@ -64,3 +64,11 @@ Program which executes a command once with each of the passed parameters **as a 
 
 ### clash
 **C language apprentice’s shell** that runs programs passed through stdin. Supports program execution in foreground and background modes, as well as changing the working directory.
+
+
+
+## Threads
+Working with **pthreads**.
+
+### palim
+**Parallel Line Matcher** program that prints the number of lines containing a given string in regular files.
