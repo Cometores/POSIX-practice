@@ -1,10 +1,28 @@
-# excufoe
-**Execute For Each** program, which executes a command with each of the passed parameters once.
-> **\$** ./excufoe \<program> \<arguments...>
+# listrun
+Program which executes a command once with each of the passed parameters **as a list**.
+> **\$** ./listrun \<program> \<arguments...>
 
 **Goals:**
-- Creating child processes by fork call.
-- Replacing a created process with an exec process.
+- Creating child processes by **fork** call.
+- Replacing a created process with an **exec** process.
+
+Expects call like:
+> **\$** ./listrun echo this is a test
+
+> this
+>
+> is
+>
+> a
+>
+> test
+
+# excufoe
+**Execute For Each** program, which executes a command with each of the passed parameters **as a string** once. The program is identical to **listrun** except that the program and parameters are passed as a string.
+> **\$** ./excufoe "\<program> \<arguments...>"
+
+**Goals:**
+- Using **strtok(3)**.
 
 Expects call like:
 > **\$** ./excufoe "echo this is a test"

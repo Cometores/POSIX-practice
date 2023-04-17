@@ -50,8 +50,11 @@ Working with files and folders using the inode table.
 ## Processes
 Working with processes with **fork(2)** and **exec(3)**.
 
+### listrun
+Program which executes a command once with each of the passed parameters **as a list**.
+
 ### excufoe
-**Execute For Each** program, which executes a command with each of the passed parameters once.
+**Execute For Each** program, which executes a command with each of the passed parameters **as a string** once. The program is identical to **listrun** except that the program and parameters are passed as a string.
 
 ### party
 **PARallel Task Player** program, which executes commands sent *through the command line* in parallel.
