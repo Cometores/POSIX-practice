@@ -1,5 +1,8 @@
 #include <stdlib.h>
 #include <stdio.h>
+#include <stdbool.h>
+
+static bool isDebug = false;
 
 static int cmp(const void *a, const void *b) {
 	const int *x = a;
@@ -18,41 +21,37 @@ int main(void) {
 	const int len = 10;
 	int array[len];
 
-	srand(4711); /* RNG initialisieren */
+	srand(4711); //Initialize RNG 
 	for(int i = 0; i < len; i++) {
 		array[i] = rand() % 42;
 
 		/*
-		 * Debug-Ausgabe, damit keine Grundfunktionalität und benötigt
-		 * somit keine Fehlerbehandlung
+		 * Debug output, thus no basic functionality and therefore does 
+		 * not require error handling
 		 */
-		fprintf(stderr, "%d\n", array[i]);
+		if (isDebug)
+			fprintf(stderr, "%d\n", array[i]);
 	}
-	fprintf(stderr, "\n");
+	if(isDebug)
+		fprintf(stderr, "\n");
+
 
 	// qsort:
-	//    Länge der einzelnen Listenelemente
-	//  das Array          \             Vergleichsfunktion
+	//    Length of the individual list elements
+	//    Array            \             Comparison function
 	//      |               \           /
 	//    vvvvv       vvvvvvvvvvvvvv  vvv
 	qsort(array, len, sizeof(*array), cmp);
 	//           ^^^
-	//           Anzahl der Elemente im Array
+	//           Number of elements in the array
+
 
 	for(int i = 0; i < len; i++) {
 		if (printf("%d\n", array[i]) < 0) {
-			/*
-			 * Grundfunktionalität, Fehlerbehandlung notwendig!
-			 */
 			perror("printf");
 			exit(EXIT_FAILURE);
 		}
 	}
-
-	/*
-	 * Wichtig da sonst eine volle Platte nicht erkannt wird, da die libc
-	 * erst beim beenden wirklich nach stdout schreibt.
-	 */
 	if (fflush(stdout) != 0) {
 		perror("fflush");
 		exit(EXIT_FAILURE);

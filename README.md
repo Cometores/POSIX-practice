@@ -1,4 +1,7 @@
 # Practice in C for POSIX standard from the Ruhr University Bochum. 
+
+A collection of problems in C programming with their solutions. The repository is based on the **"Operating Systems 2022"** course from **Ruhr-University Bochum**. The problems are aimed at an in-depth understanding of interaction with the POSIX operating systems kernel. The problems are divided into sections and go from the easy to the hard level.
+
 **Goals:**
 - Work with Linux **system calls**
 - Learn how **processes** and **threads** work
@@ -20,6 +23,9 @@ Implementation of a simplified version of the **Sieve of Eratosthenes** (an algo
 ### lists
 Implementation of the **lilo** and **filo** singly-linked list.
 
+### isort
+**Integer Sort** program which sorts an array of random numbers.
+
 
 
 ## IO
@@ -30,6 +36,7 @@ Implementation of an **Input-Output Repeater**. When entering a line into the co
 
 ### wsort
  **Word Sorting** program reads a list of words from the standard input channel (*stdin*), sorts this list alphabetically and outputs the sorted list on the standard output channel (*stdout*).
+
 
 
 ## File System
